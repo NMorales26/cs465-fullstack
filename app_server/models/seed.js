@@ -6,7 +6,7 @@ const Trip = require('./travlr');
 var fs = require('fs');
 var trips = JSON.parse(fs.readFileSync('./data/trips.json','utf8'))
 
-// delete any existing recors, then insert seed data
+// delete any existing recordss, then insert seed data
 const seedDB = async () => {
     await Trip.deleteMany({});
     await Trip.insertMany(trips);
